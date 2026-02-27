@@ -1,0 +1,236 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Premium redesign: Lucide icons, multi-accent palette, glassmorphism+gradient luxury aesthetic",
+  "requirements": [
+    {
+      "id": "REQ-13",
+      "summary": "Replace all emoji icons with contextually appropriate Lucide React SVG icons sized at 20–24px across Quick Access, Mess Menu, Events, Notices, Navbar, BottomPanel, and Modal",
+      "acceptanceCriteria": [
+        "No emoji characters appear anywhere in the rendered UI",
+        "All icons are Lucide React SVG components",
+        "Icons are consistently sized at 20–24px across all sections",
+        "Icons are contextually relevant to their card/section labels"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/package.json",
+          "operation": "modify",
+          "description": "Add lucide-react package as a dependency for SVG icon components"
+        },
+        {
+          "path": "frontend/src/components/QuickAccess.tsx",
+          "operation": "modify",
+          "description": "Replace emoji icons with Lucide icons: CalendarDays for Timetable, CheckSquare for Attendance, BookOpen for Library, Coffee for Canteen, MapPin for Map, Info for Help. Import from lucide-react and set size to 20–24px. Remove all emoji strings from tile data."
+        },
+        {
+          "path": "frontend/src/components/MessMenu.tsx",
+          "operation": "modify",
+          "description": "Replace emoji meal icons with Lucide icons: Coffee for Breakfast, UtensilsCrossed for Lunch, Moon for Dinner. Import from lucide-react and set size to 20–24px. Remove all emoji strings."
+        },
+        {
+          "path": "frontend/src/components/Events.tsx",
+          "operation": "modify",
+          "description": "Replace emoji event icons with Lucide Zap icon for all events. Import from lucide-react and set size to 20–24px. Remove all emoji strings from event data."
+        },
+        {
+          "path": "frontend/src/components/Notices.tsx",
+          "operation": "modify",
+          "description": "Replace emoji notice icons with Lucide Bell icon for all notices. Import from lucide-react and set size to 20–24px. Remove all emoji strings from notice data."
+        },
+        {
+          "path": "frontend/src/components/Navbar.tsx",
+          "operation": "modify",
+          "description": "Replace hamburger emoji/text with Lucide Menu icon styled with emerald colour (#4a9e6a). Import from lucide-react and set size to 24px. Remove any emoji strings."
+        },
+        {
+          "path": "frontend/src/components/shared/BottomPanel.tsx",
+          "operation": "modify",
+          "description": "Replace close button emoji/text with Lucide X icon in emerald colour. Import from lucide-react and set size to 20px."
+        },
+        {
+          "path": "frontend/src/components/shared/Modal.tsx",
+          "operation": "modify",
+          "description": "Replace close button emoji/text with Lucide X icon in emerald colour. Import from lucide-react and set size to 20px."
+        }
+      ]
+    },
+    {
+      "id": "REQ-14",
+      "summary": "Upgrade global colour palette to multi-accent system with forest greens as base and amber/gold, teal, emerald accents applied contextually throughout the UI",
+      "acceptanceCriteria": [
+        "CSS custom properties include amber/gold, teal, and emerald tokens",
+        "Tailwind config exposes these as usable class names",
+        "Amber/gold accent appears on at least section headers or badges",
+        "Teal accent appears on secondary card borders or icon backgrounds",
+        "Emerald accent is used on active/interactive states",
+        "Forest green remains the dominant colour throughout"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Add CSS custom properties for multi-accent palette: --accent-amber (#c97d2a), --accent-amber-light (#e8a84a), --accent-teal (#1a6b5a), --accent-emerald (#4a9e6a). Update existing forest green tokens (#1a3a2a, #2d5a3d, #0f2419) to remain dominant. Ensure amber/gold, teal, and emerald are defined as contextual accent tokens."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Extend theme.colors to expose amber (c97d2a, e8a84a), teal (1a6b5a), and emerald (4a9e6a) as usable Tailwind class names (e.g., text-accent-amber, bg-accent-teal, border-accent-emerald). Keep forest green tokens as primary/base colours."
+        }
+      ]
+    },
+    {
+      "id": "REQ-15",
+      "summary": "Redesign all card components with premium mixed aesthetic: deep green-tinted glassmorphism, bold gradients, emerald rim border, generous padding, and clear typography hierarchy",
+      "acceptanceCriteria": [
+        "All card types use deep green-tinted glassmorphism backgrounds",
+        "Cards have a visible emerald rim border at 1px",
+        "Internal padding is at least 20px",
+        "Typography hierarchy is clearly distinguishable: title > subtitle > body",
+        "Cards appear three-dimensional through layered box-shadows",
+        "18px border-radius is maintained on all cards"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/QuickAccess.tsx",
+          "operation": "modify",
+          "description": "Apply premium card styling to Quick Access tiles: backdrop-blur-md, background rgba(26,58,42,0.6), border-radius 18px, 1px border rgba(74,158,106,0.25), padding 24px. Add layered box-shadows (inner glow + outer drop shadow). Set title to 16–18px bold, metadata to 12–13px muted, body to 14px with line-height 1.6."
+        },
+        {
+          "path": "frontend/src/components/MessMenu.tsx",
+          "operation": "modify",
+          "description": "Apply premium card styling to meal cards: backdrop-blur-md, background rgba(26,58,42,0.6), border-radius 18px, 1px border rgba(74,158,106,0.25), padding 24px. Add layered box-shadows. Set meal name to 16–18px bold, timings to 12–13px muted, food items to 14px with line-height 1.6."
+        },
+        {
+          "path": "frontend/src/components/Events.tsx",
+          "operation": "modify",
+          "description": "Apply premium card styling to event cards: backdrop-blur-md, background rgba(26,58,42,0.6), border-radius 18px, 1px border rgba(74,158,106,0.25), padding 24px. Add layered box-shadows. Set event title to 16–18px bold, date/location to 12–13px muted, description to 14px with line-height 1.6."
+        },
+        {
+          "path": "frontend/src/components/Notices.tsx",
+          "operation": "modify",
+          "description": "Apply premium card styling to notice cards: backdrop-blur-md, background rgba(26,58,42,0.6), border-radius 18px, 1px border rgba(74,158,106,0.25), padding 24px. Add layered box-shadows. Set notice title to 16–18px bold, date/category to 12–13px muted, body to 14px with line-height 1.6."
+        }
+      ]
+    },
+    {
+      "id": "REQ-16",
+      "summary": "Overhaul Hero section with dramatic premium aesthetic: multi-stop radial gradient, gradient text heading, premium badge, ambient glow orbs, and high-end typography",
+      "acceptanceCriteria": [
+        "Hero heading uses a gradient text effect (emerald to amber)",
+        "Background uses a deep multi-stop radial gradient",
+        "A premium badge/pill subtitle is present below the heading",
+        "Heading is 56px+ on mobile screens",
+        "Ambient glow orbs are visible in the background at low opacity",
+        "Overall impression is dramatically more premium than before"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Hero.tsx",
+          "operation": "modify",
+          "description": "Replace existing background with deep multi-stop radial gradient (from #0f2419 center to #1a3a2a to #0a0f0b edges). Apply gradient text effect to 'unaIITM' heading (emerald #4a9e6a to amber #e8a84a) using background-clip: text. Add premium subtitle badge ('IIT Madras Campus Platform') with teal-tinted glassmorphism pill styling. Increase heading font-size to 56–64px on mobile with letter-spacing -0.02em. Add 2–3 subtle ambient glow orbs (green/teal/amber) at low opacity positioned decoratively in background."
+        }
+      ]
+    },
+    {
+      "id": "REQ-17",
+      "summary": "Upgrade Navbar to premium glassmorphism bar with deeper blur, emerald separator, gradient logo text, Lucide Menu icon, and hover-accented dropdown links",
+      "acceptanceCriteria": [
+        "Navbar uses backdrop-blur(24px) and deep rgba background",
+        "Logo text has emerald-to-amber gradient effect",
+        "Hamburger is replaced with Lucide Menu icon in emerald",
+        "Dropdown nav links have left-side teal accent bars on hover",
+        "A subtle emerald bottom border is visible on the navbar"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Navbar.tsx",
+          "operation": "modify",
+          "description": "Increase backdrop-blur to blur(24px), deepen background to rgba(15,36,25,0.85). Add 1px bottom border rgba(74,158,106,0.2). Apply gradient text effect (emerald to amber) to 'unaIITM' logo matching Hero heading. Replace hamburger with Lucide Menu icon in emerald (#4a9e6a). Style dropdown nav links with left-side teal accent bars on hover."
+        }
+      ]
+    },
+    {
+      "id": "REQ-18",
+      "summary": "Improve global spacing and typography hierarchy: larger section titles with gradient underlines, increased vertical padding, improved line-height, and premium letter-spacing",
+      "acceptanceCriteria": [
+        "Section headings are 26px+ with a gradient or accent underline",
+        "Vertical section spacing is at least 64px",
+        "Global body line-height is 1.65 or greater",
+        "Headings use letter-spacing -0.01em",
+        "BottomPanel and Modal list items have 16px+ padding",
+        "Typography hierarchy is clearly distinguished throughout"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/shared/SectionHeader.tsx",
+          "operation": "modify",
+          "description": "Increase title font-size to 26–30px bold. Add gradient underline or accent line using amber/teal palette. Set subtitle to 13–14px in muted off-white (#a8c4b0). Apply letter-spacing -0.01em to heading."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Set global body line-height to 1.65. Add utility classes for section spacing (py-16 = 64px vertical padding minimum). Ensure headings use letter-spacing -0.01em. Add margin-bottom utilities for generous section separation."
+        },
+        {
+          "path": "frontend/src/components/shared/BottomPanel.tsx",
+          "operation": "modify",
+          "description": "Increase top/bottom padding on all list items inside BottomPanel body to 16px minimum. Ensure consistent vertical rhythm and generous touch targets."
+        },
+        {
+          "path": "frontend/src/components/shared/Modal.tsx",
+          "operation": "modify",
+          "description": "Increase top/bottom padding on all list items inside Modal body to 16px minimum. Ensure consistent vertical rhythm and generous touch targets."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Increase vertical padding between sections to at least 64px (py-16 or equivalent). Apply consistent spacing between Hero, QuickAccess, MessMenu, Events, Notices, and Footer."
+        }
+      ]
+    },
+    {
+      "id": "REQ-19",
+      "summary": "Redesign Mess Menu with distinct accent colours per meal (amber Breakfast, emerald Lunch, teal Dinner), Lucide icons in headers, styled food lists, and timings badges",
+      "acceptanceCriteria": [
+        "Breakfast card header uses amber/gold accent",
+        "Lunch card header uses emerald accent",
+        "Dinner card header uses teal accent",
+        "Each card header includes a Lucide icon",
+        "Food items have subtle divider lines between them",
+        "Timings badge is present with accent-coloured background"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/MessMenu.tsx",
+          "operation": "modify",
+          "description": "Apply distinct accent colours to meal card headers: amber/gold (#c97d2a, #e8a84a) for Breakfast, emerald (#4a9e6a) for Lunch, teal (#1a6b5a) for Dinner. Include Lucide icon (Coffee, UtensilsCrossed, Moon) in each header alongside meal name. Display food items as styled list with subtle 1px divider lines (rgba(74,158,106,0.15)). Add 'Timings' badge below meal title using accent colour as background at 20% opacity."
+        }
+      ]
+    },
+    {
+      "id": "REQ-20",
+      "summary": "Redesign Quick Access tiles with premium icon card style: gradient icon containers, Lucide icons, canopy-inspired pattern background, and enhanced BottomPanel headers",
+      "acceptanceCriteria": [
+        "Each Quick Access tile has a gradient icon container circle",
+        "Lucide icon is centred in the icon container in white",
+        "Label text is 12px semi-bold below the icon",
+        "BottomPanel header includes the corresponding Lucide icon and gradient title",
+        "BottomPanel close button uses Lucide X icon in emerald",
+        "Row background has a subtle patterned overlay"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/QuickAccess.tsx",
+          "operation": "modify",
+          "description": "Redesign tiles to square/rounded-square format with 44px gradient icon container circle (green-to-teal or green-to-amber gradient background) centred at top. Place Lucide icon inside in white. Position label text below icon at 12px semi-bold. Add subtle canopy-inspired pattern to row background using CSS repeating gradients at low opacity. When BottomPanel opens, include the tile's Lucide icon in header alongside gradient accent title."
+        },
+        {
+          "path": "frontend/src/components/shared/BottomPanel.tsx",
+          "operation": "modify",
+          "description": "Enhance header to accept an optional icon prop (Lucide component). Display icon alongside title with gradient accent styling. Ensure close button uses Lucide X icon in emerald (already covered in REQ-13)."
+        }
+      ]
+    }
+  ]
+}

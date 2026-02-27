@@ -1,0 +1,196 @@
+{
+  "kind": "build_request",
+  "title": "Premium redesign: Lucide icons, multi-accent palette, glassmorphism+gradient luxury aesthetic",
+  "projectName": "unaIITM",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-13",
+      "text": "Replace all emoji icons across every section (Quick Access, Mess Menu, Events, Notices, Navbar, BottomPanel, Modal) with Lucide React SVG icons. Each icon should be contextually appropriate (e.g., CalendarDays for Timetable, BookOpen for Library, UtensilsCrossed for Mess Menu, Bell for Notices, Zap for Events) and sized consistently at 20–24px. Remove all emoji strings from the codebase.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "yeah",
+          "Replace emojis with Lucide icons (clean, modern SVG)"
+        ]
+      },
+      "acceptanceCriteria": [
+        "No emoji characters appear anywhere in the rendered UI",
+        "All icons are Lucide React SVG components",
+        "Icons are consistently sized at 20–24px across all sections",
+        "Icons are contextually relevant to their card/section labels"
+      ]
+    },
+    {
+      "id": "REQ-14",
+      "text": "Upgrade the global colour palette to a multi-accent system with forest greens (#1a3a2a, #2d5a3d, #0f2419) as the dominant base and three complementary accents used sparingly: amber/gold (#c97d2a, #e8a84a) for warmth and highlights, teal (#1a6b5a) for depth on secondary elements, and emerald (#4a9e6a) for interactive highlights. Update CSS custom properties in frontend/src/index.css and tailwind.config.js to include these tokens. Apply accents contextually: amber/gold on section headers or badge indicators, teal on secondary card borders or icon backgrounds, emerald on active states and CTA elements.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-3"
+        ],
+        "quotes": [
+          "mix of colours(mainly green but few colours which match green here there)",
+          "amber/gold (#c97d2a, #e8a84a) for warmth, teal (#1a6b5a) for depth, and soft emerald highlights (#4a9e6a)"
+        ]
+      },
+      "acceptanceCriteria": [
+        "CSS custom properties include amber/gold, teal, and emerald tokens",
+        "Tailwind config exposes these as usable class names",
+        "Amber/gold accent appears on at least section headers or badges",
+        "Teal accent appears on secondary card borders or icon backgrounds",
+        "Emerald accent is used on active/interactive states",
+        "Forest green remains the dominant colour throughout"
+      ]
+    },
+    {
+      "id": "REQ-15",
+      "text": "Redesign all card components (Quick Access tiles, Mess Menu meal cards, Event cards, Notice cards) with a premium mixed aesthetic: deep green-tinted glassmorphism (backdrop-blur-md, rgba(26,58,42,0.6) background), bold layered gradients as card backgrounds, 18px border-radius, a 1px border using rgba(74,158,106,0.25) for subtle emerald rim lighting, and generous internal padding (24px+). Cards should feel layered and three-dimensional through use of multiple box-shadows (inner glow + outer drop shadow). Typography inside cards should use a clear hierarchy: bold title at 16–18px, muted subtitle/metadata at 12–13px, and body text at 14px with line-height 1.6.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1",
+          "msg-3"
+        ],
+        "quotes": [
+          "icons, spacing between lines, homepage look(i mean colours, elements etc) fee too basic, a high end website is need thing",
+          "Glassmorphism depth + bold gradients + refined typography — mixed for maximum premium impact"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All card types use deep green-tinted glassmorphism backgrounds",
+        "Cards have a visible emerald rim border at 1px",
+        "Internal padding is at least 20px",
+        "Typography hierarchy is clearly distinguishable: title > subtitle > body",
+        "Cards appear three-dimensional through layered box-shadows",
+        "18px border-radius is maintained on all cards"
+      ]
+    },
+    {
+      "id": "REQ-16",
+      "text": "Overhaul the Hero section with a dramatically premium feel: use a deep multi-stop radial gradient background (from #0f2419 at center to #1a3a2a to near-black #0a0f0b at edges). Style the 'unaIITM' heading with a gradient text effect transitioning from emerald (#4a9e6a) to amber (#e8a84a) via CSS background-clip: text. Add a premium subtitle badge (e.g., 'IIT Madras Campus Platform') with a teal-tinted glassmorphism pill shape. Increase heading font size to 56–64px on mobile, with letter-spacing -0.02em for a high-end typographic feel. Add 2–3 subtle ambient glow orbs in green/teal/amber positioned decoratively in the background at very low opacity.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1",
+          "msg-3"
+        ],
+        "quotes": [
+          "homepage look(i mean colours, elements etc) fee too basic, a high end website is need thing",
+          "mix"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Hero heading uses a gradient text effect (emerald to amber)",
+        "Background uses a deep multi-stop radial gradient",
+        "A premium badge/pill subtitle is present below the heading",
+        "Heading is 56px+ on mobile screens",
+        "Ambient glow orbs are visible in the background at low opacity",
+        "Overall impression is dramatically more premium than before"
+      ]
+    },
+    {
+      "id": "REQ-17",
+      "text": "Upgrade the Navbar to a premium glassmorphism bar: increase backdrop-blur to blur(24px), deepen the background to rgba(15,36,25,0.85), add a bottom border of 1px solid rgba(74,158,106,0.2) for a subtle emerald separator. Style the 'unaIITM' logo text with the same gradient text effect (emerald to amber) matching the hero heading. The hamburger icon should be replaced with a Lucide Menu icon styled with emerald colour (#4a9e6a). The dropdown menu should use a deep glassmorphism background with individual nav links styled with left-side teal accent bars on hover.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "homepage look(i mean colours, elements etc) fee too basic, a high end website is need thing"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Navbar uses backdrop-blur(24px) and deep rgba background",
+        "Logo text has emerald-to-amber gradient effect",
+        "Hamburger is replaced with Lucide Menu icon in emerald",
+        "Dropdown nav links have left-side teal accent bars on hover",
+        "A subtle emerald bottom border is visible on the navbar"
+      ]
+    },
+    {
+      "id": "REQ-18",
+      "text": "Improve global spacing and typography hierarchy across all sections. Section titles (SectionHeader) should be 26–30px bold with a gradient underline or accent line using the amber/teal palette. Section subtitles should be 13–14px in muted off-white (#a8c4b0). Increase vertical padding between sections to at least 64px. Increase line-height to 1.65 globally for body text. Add generous top/bottom padding (16px minimum) to all list items inside BottomPanel and Modal. Apply letter-spacing: -0.01em to all headings for a premium typographic feel.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "spacing between lines",
+          "icons, spacing between lines, homepage look(i mean colours, elements etc) fee too basic"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Section headings are 26px+ with a gradient or accent underline",
+        "Vertical section spacing is at least 64px",
+        "Global body line-height is 1.65 or greater",
+        "Headings use letter-spacing -0.01em",
+        "BottomPanel and Modal list items have 16px+ padding",
+        "Typography hierarchy is clearly distinguished throughout"
+      ]
+    },
+    {
+      "id": "REQ-19",
+      "text": "Redesign the Mess Menu section with a premium card layout: each meal card (Breakfast, Lunch, Dinner) should have a distinct accent colour applied to its header strip — amber/gold for Breakfast, emerald for Lunch, teal for Dinner. Each card header should include the Lucide icon (e.g., Coffee, UtensilsCrossed, Moon) alongside the meal name. Food items inside the card should be displayed as a styled list with subtle divider lines (1px rgba(74,158,106,0.15)). Add a 'Timings' badge below each meal title using the accent colour as background at 20% opacity.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1",
+          "msg-3"
+        ],
+        "quotes": [
+          "homepage look(i mean colours, elements etc) fee too basic, a high end website is need thing"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Breakfast card header uses amber/gold accent",
+        "Lunch card header uses emerald accent",
+        "Dinner card header uses teal accent",
+        "Each card header includes a Lucide icon",
+        "Food items have subtle divider lines between them",
+        "Timings badge is present with accent-coloured background"
+      ]
+    },
+    {
+      "id": "REQ-20",
+      "text": "Redesign the Quick Access section tiles with a premium icon card style: each tile should have a square or rounded-square format with a gradient icon container (small 44px circle with a tinted green-to-teal or green-to-amber gradient background) centred at top, the Lucide icon inside in white, and the label text below in 12px semi-bold. The row background should use a subtle canopy-inspired pattern using CSS repeating gradients at low opacity. The BottomPanel opened from each tile should have a premium header with the tile's Lucide icon, gradient accent title, and a styled close button (X icon from Lucide in emerald).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Each Quick Access tile has a gradient icon container circle",
+        "Lucide icon is centred in the icon container in white",
+        "Label text is 12px semi-bold below the icon",
+        "BottomPanel header includes the corresponding Lucide icon and gradient title",
+        "BottomPanel close button uses Lucide X icon in emerald",
+        "Row background has a subtle patterned overlay"
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not modify files under frontend/src/hooks/ or frontend/src/main.tsx",
+    "Do not modify files under frontend/src/components/ui/",
+    "Forest green must remain the dominant colour — accents (amber, teal, emerald) must be used sparingly and not overpower the green base",
+    "All card border-radius must remain at 18px",
+    "Mobile-first layout must be preserved — all touch targets at least 44px tall"
+  ],
+  "nonGoals": [
+    "Adding new sections or features beyond redesigning existing ones",
+    "Backend changes",
+    "Internet Identity / authentication integration",
+    "Adding real data or API integrations",
+    "Changing the page structure or section order"
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

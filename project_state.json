@@ -1,0 +1,234 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 7,
+  "summary": "Mobile-first React homepage for unaIITM, a campus platform for IIT Madras students. Theme: deep forest greens (#1a3a2a, #2d5a3d, #0f2419) as dominant base with amber/gold (#c97d2a, #e8a84a), teal (#1a6b5a), and emerald highlights (#4a9e6a) as complementary accents. Glassmorphism-heavy + gradient-rich + minimalist luxury mixed approach. Lucide icons replacing emojis. Generous spacing, improved line-height, refined typography hierarchy. Sections: Sticky Navbar, Hero, Quick Access (swipe cards + slide-up panel), Mess Menu (Breakfast/Lunch/Dinner horizontal scroll), Events (swipe cards + animated modal), Notices (same as events). Reusable React components with clean layout architecture.",
+  "architectural_notes": [
+    "Deep green + charcoal color base; glassmorphism panels; soft glow hover; 18px rounded corners; smooth transitions; Inter-style typography",
+    "Mobile-first React app using reusable components; all sections optimized for touch/swipe interaction",
+    "Lucide icon library used throughout; amber/gold (#c97d2a, #e8a84a), teal (#1a6b5a), and emerald (#4a9e6a) used as accent colours alongside primary forest greens"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-apply-a-deep-green-charcoal-visual-theme-across-the-entire-app-use-css-custom-properties-or-tailwind-config-for-a-palette-of-forest-green-1a3a2a-2d5a3d-charcoal-1c1c1e-2a2a2e-and-off-white-e8f0eb-text-import-and-apply-inter-font-globally-set-base-border-radius-to-18px-on-cards-and-panels-define-smooth-css-transitions-200-350ms-ease-and-soft-glow-box-shadows-on-interactive-elements-the-theme-must-not-be-a-plain-dark-theme-use-subtle-green-tinted-gradients-on-backgrounds",
+      "title": "Apply a deep green + charcoal visual theme across the entire app: use CSS custom properties or Tailwind config for a palette of forest green (#1a3a2a, #2d5a3d), charcoal (#1c1c1e, #2a2a2e), and off-white (#e8f0eb) text. Import and apply Inter font globally. Set base border-radius to 18px on cards and panels. Define smooth CSS transitions (200–350ms ease) and soft glow box-shadows on interactive elements. The theme must NOT be a plain dark theme — use subtle green-tinted gradients on backgrounds.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-sticky-top-navbar-component-fixed-to-the-top-of-the-viewport-left-side-unaiitm-styled-logo-text-in-bold-inter-with-a-green-accent-right-side-a-hamburger-icon-button-tapping-the-hamburger-toggles-a-full-width-dropdown-menu-slides-down-with-animation-containing-navigation-links-home-quick-access-mess-menu-events-notices-each-link-scrolls-to-the-corresponding-section-and-closes-the-menu-the-navbar-has-a-glassmorphism-background-backdrop-blur-semi-transparent-deep-green",
+      "title": "Create a sticky top Navbar component fixed to the top of the viewport. Left side: 'unaIITM' styled logo text in bold Inter with a green accent. Right side: a hamburger icon button. Tapping the hamburger toggles a full-width dropdown menu (slides down with animation) containing navigation links: Home, Quick Access, Mess Menu, Events, Notices. Each link scrolls to the corresponding section and closes the menu. The navbar has a glassmorphism background (backdrop-blur + semi-transparent deep green).",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-hero-section-as-the-first-full-viewport-section-below-the-navbar-display-the-unaiitm-logo-text-in-a-large-bold-heading-below-it-show-a-tagline-such-as-your-campus-connected-apply-a-subtle-gradient-background-that-evokes-iit-madras-campus-nature-layered-greens-fading-into-charcoal-optionally-add-a-very-subtle-leaf-forest-texture-overlay-at-low-opacity-the-section-must-feel-calm-and-premium",
+      "title": "Create a Hero section as the first full-viewport section below the navbar. Display the 'unaIITM' logo text in a large, bold heading. Below it, show a tagline such as 'Your campus, connected.' Apply a subtle gradient background that evokes IIT Madras campus nature — layered greens fading into charcoal. Optionally add a very subtle leaf/forest texture overlay at low opacity. The section must feel calm and premium.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-quick-access-section-with-a-horizontal-swipe-scrollable-row-of-icon-label-cards-each-card-has-a-large-tap-target-a-relevant-emoji-or-icon-and-a-short-label-e-g-timetable-attendance-library-hostel-transport-academic-calendar-tapping-a-card-opens-a-slide-up-bottom-panel-mobile-drawer-specific-to-that-item-the-bottom-panel-slides-up-from-the-bottom-of-the-screen-with-a-smooth-animation-has-a-drag-handle-at-the-top-a-title-matching-the-card-placeholder-content-and-a-close-button",
+      "title": "Create a Quick Access section with a horizontal swipe-scrollable row of icon + label cards. Each card has a large tap target, a relevant emoji or icon, and a short label (e.g., Timetable, Attendance, Library, Hostel, Transport, Academic Calendar). Tapping a card opens a slide-up bottom panel (mobile drawer) specific to that item. The bottom panel slides up from the bottom of the screen with a smooth animation, has a drag handle at the top, a title matching the card, placeholder content, and a close button.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-mess-menu-section-with-three-horizontally-swipe-scrollable-columns-representing-breakfast-lunch-and-dinner-each-column-is-a-glassmorphism-card-listing-food-items-for-that-meal-the-entire-section-scrolls-horizontally-snap-scroll-populate-each-column-with-realistic-sample-iit-madras-mess-menu-items-e-g-idli-sambar-pongal-for-breakfast-cards-use-the-18px-border-radius-and-deep-green-styling",
+      "title": "Create a Mess Menu section with three horizontally swipe-scrollable columns representing Breakfast, Lunch, and Dinner. Each column is a glassmorphism card listing food items for that meal. The entire section scrolls horizontally (snap scroll). Populate each column with realistic sample IIT Madras mess menu items (e.g., Idli, Sambar, Pongal for Breakfast). Cards use the 18px border-radius and deep green styling.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-an-events-section-with-a-horizontally-swipe-scrollable-row-of-event-cards-each-card-shows-an-emoji-icon-event-title-date-and-a-short-one-line-description-tapping-a-card-opens-an-animated-modal-overlay-with-full-event-details-title-date-description-location-placeholder-the-modal-entrance-animation-is-a-scale-in-or-slide-up-fade-the-modal-has-a-close-button-and-a-semi-transparent-overlay-backdrop",
+      "title": "Create an Events section with a horizontally swipe-scrollable row of event cards. Each card shows an emoji/icon, event title, date, and a short one-line description. Tapping a card opens an animated modal overlay with full event details (title, date, description, location placeholder). The modal entrance animation is a scale-in or slide-up fade. The modal has a close button and a semi-transparent overlay backdrop.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-notices-section-with-identical-structure-and-interaction-to-the-events-section-horizontally-swipe-scrollable-notice-cards-with-icon-title-date-and-short-summary-tapping-opens-an-animated-modal-with-full-notice-text-design-must-match-the-events-section-style-but-with-a-slightly-different-accent-e-g-amber-or-teal-tint-on-the-icon-to-visually-differentiate",
+      "title": "Create a Notices section with identical structure and interaction to the Events section: horizontally swipe-scrollable notice cards with icon, title, date, and short summary. Tapping opens an animated modal with full notice text. Design must match the Events section style but with a slightly different accent (e.g., amber or teal tint on the icon) to visually differentiate.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-reusable-shared-components-bottompanel-slide-up-mobile-drawer-used-by-quick-access-modal-animated-overlay-used-by-events-and-notices-horizontalscrollrow-wrapper-for-swipe-scroll-sections-sectionheader-consistent-title-subtitle-heading-for-each-section-all-components-must-accept-children-and-relevant-props-shared-animation-utilities-css-keyframes-or-inline-transition-styles-should-be-centralized",
+      "title": "Implement reusable shared components: BottomPanel (slide-up mobile drawer used by Quick Access), Modal (animated overlay used by Events and Notices), HorizontalScrollRow (wrapper for swipe-scroll sections), SectionHeader (consistent title + subtitle heading for each section). All components must accept children and relevant props. Shared animation utilities (CSS keyframes or inline transition styles) should be centralized.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-ensure-the-entire-layout-is-mobile-first-and-optimized-for-screens-375px-430px-wide-iphone-android-all-touch-targets-must-be-at-least-44px-tall-horizontal-scroll-areas-must-work-with-native-touch-swipe-the-page-must-be-scrollable-vertically-through-all-sections-in-order-hero-quick-access-mess-menu-events-notices-section-anchors-must-match-the-navbar-dropdown-links",
+      "title": "Ensure the entire layout is mobile-first and optimized for screens 375px–430px wide (iPhone/Android). All touch targets must be at least 44px tall. Horizontal scroll areas must work with native touch swipe. The page must be scrollable vertically through all sections in order: Hero → Quick Access → Mess Menu → Events → Notices. Section anchors must match the navbar dropdown links.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-smooth-hover-animations-to-all-interactive-elements-across-the-app-quick-access-cards-mess-menu-cards-events-cards-notices-cards-and-navbar-links-on-hover-cards-should-lift-with-a-subtle-translatey-4px-to-6px-transform-intensify-their-glow-box-shadow-using-the-forest-green-palette-and-slightly-brighten-their-glassmorphism-background-transitions-must-be-200-350ms-ease-navbar-links-should-show-a-green-underline-slide-in-animation-on-hover",
+      "title": "Add smooth hover animations to all interactive elements across the app: Quick Access cards, Mess Menu cards, Events cards, Notices cards, and Navbar links. On hover, cards should lift with a subtle translateY(-4px to -6px) transform, intensify their glow box-shadow using the forest green palette, and slightly brighten their glassmorphism background. Transitions must be 200–350ms ease. Navbar links should show a green underline slide-in animation on hover.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-enhance-the-nature-theme-across-the-entire-app-with-deeper-forest-greens-and-richer-nature-inspired-visual-details-update-the-hero-section-background-to-use-deeper-layered-radial-gradients-with-richer-forest-greens-1a3a2a-0f2419-add-subtle-animated-or-static-leaf-botanical-svg-decorative-elements-at-very-low-opacity-5-10-as-background-overlays-in-the-hero-and-section-backgrounds-strengthen-the-green-tinted-glassmorphism-on-all-cards-by-deepening-the-tint-toward-1a3a2a-apply-a-gentle-dappled-light-or-canopy-inspired-texture-feel-using-css-gradients-or-subtle-repeating-patterns-on-section-backgrounds",
+      "title": "Enhance the nature theme across the entire app with deeper forest greens and richer nature-inspired visual details. Update the Hero section background to use deeper layered radial gradients with richer forest greens (#1a3a2a, #0f2419). Add subtle animated or static leaf/botanical SVG decorative elements at very low opacity (5–10%) as background overlays in the Hero and section backgrounds. Strengthen the green-tinted glassmorphism on all cards by deepening the tint toward #1a3a2a. Apply a gentle dappled-light or canopy-inspired texture feel using CSS gradients or subtle repeating patterns on section backgrounds.",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-enhanced-glow-effects-on-hover-for-all-interactive-elements-quick-access-cards-event-cards-notice-cards-and-mess-menu-cards-should-emit-a-soft-green-glow-box-shadow-using-2d5a3d-or-4a9e6a-at-30-50-opacity-on-hover-buttons-and-close-icons-in-bottompanel-and-modal-should-glow-or-brighten-on-hover-the-navbar-hamburger-button-should-have-a-subtle-green-glow-on-hover-focus",
+      "title": "Add enhanced glow effects on hover for all interactive elements. Quick Access cards, event cards, notice cards, and mess menu cards should emit a soft green glow (box-shadow using #2d5a3d or #4a9e6a at 30–50% opacity) on hover. Buttons and close icons in BottomPanel and Modal should glow or brighten on hover. The Navbar hamburger button should have a subtle green glow on hover/focus.",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-all-emoji-icons-across-every-section-quick-access-mess-menu-events-notices-navbar-bottompanel-modal-with-lucide-react-svg-icons-each-icon-should-be-contextually-appropriate-e-g-calendardays-for-timetable-bookopen-for-library-utensilscrossed-for-mess-menu-bell-for-notices-zap-for-events-and-sized-consistently-at-20-24px-remove-all-emoji-strings-from-the-codebase",
+      "title": "Replace all emoji icons across every section (Quick Access, Mess Menu, Events, Notices, Navbar, BottomPanel, Modal) with Lucide React SVG icons. Each icon should be contextually appropriate (e.g., CalendarDays for Timetable, BookOpen for Library, UtensilsCrossed for Mess Menu, Bell for Notices, Zap for Events) and sized consistently at 20–24px. Remove all emoji strings from the codebase.",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-upgrade-the-global-colour-palette-to-a-multi-accent-system-with-forest-greens-1a3a2a-2d5a3d-0f2419-as-the-dominant-base-and-three-complementary-accents-used-sparingly-amber-gold-c97d2a-e8a84a-for-warmth-and-highlights-teal-1a6b5a-for-depth-on-secondary-elements-and-emerald-4a9e6a-for-interactive-highlights-update-css-custom-properties-in-frontend-src-index-css-and-tailwind-config-js-to-include-these-tokens-apply-accents-contextually-amber-gold-on-section-headers-or-badge-indicators-teal-on-secondary-card-borders-or-icon-backgrounds-emerald-on-active-states-and-cta-elements",
+      "title": "Upgrade the global colour palette to a multi-accent system with forest greens (#1a3a2a, #2d5a3d, #0f2419) as the dominant base and three complementary accents used sparingly: amber/gold (#c97d2a, #e8a84a) for warmth and highlights, teal (#1a6b5a) for depth on secondary elements, and emerald (#4a9e6a) for interactive highlights. Update CSS custom properties in frontend/src/index.css and tailwind.config.js to include these tokens. Apply accents contextually: amber/gold on section headers or badge indicators, teal on secondary card borders or icon backgrounds, emerald on active states and CTA elements.",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-redesign-all-card-components-quick-access-tiles-mess-menu-meal-cards-event-cards-notice-cards-with-a-premium-mixed-aesthetic-deep-green-tinted-glassmorphism-backdrop-blur-md-rgba-26-58-42-0-6-background-bold-layered-gradients-as-card-backgrounds-18px-border-radius-a-1px-border-using-rgba-74-158-106-0-25-for-subtle-emerald-rim-lighting-and-generous-internal-padding-24px-cards-should-feel-layered-and-three-dimensional-through-use-of-multiple-box-shadows-inner-glow-outer-drop-shadow-typography-inside-cards-should-use-a-clear-hierarchy-bold-title-at-16-18px-muted-subtitle-metadata-at-12-13px-and-body-text-at-14px-with-line-height-1-6",
+      "title": "Redesign all card components (Quick Access tiles, Mess Menu meal cards, Event cards, Notice cards) with a premium mixed aesthetic: deep green-tinted glassmorphism (backdrop-blur-md, rgba(26,58,42,0.6) background), bold layered gradients as card backgrounds, 18px border-radius, a 1px border using rgba(74,158,106,0.25) for subtle emerald rim lighting, and generous internal padding (24px+). Cards should feel layered and three-dimensional through use of multiple box-shadows (inner glow + outer drop shadow). Typography inside cards should use a clear hierarchy: bold title at 16–18px, muted subtitle/metadata at 12–13px, and body text at 14px with line-height 1.6.",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-overhaul-the-hero-section-with-a-dramatically-premium-feel-use-a-deep-multi-stop-radial-gradient-background-from-0f2419-at-center-to-1a3a2a-to-near-black-0a0f0b-at-edges-style-the-unaiitm-heading-with-a-gradient-text-effect-transitioning-from-emerald-4a9e6a-to-amber-e8a84a-via-css-background-clip-text-add-a-premium-subtitle-badge-e-g-iit-madras-campus-platform-with-a-teal-tinted-glassmorphism-pill-shape-increase-heading-font-size-to-56-64px-on-mobile-with-letter-spacing-0-02em-for-a-high-end-typographic-feel-add-2-3-subtle-ambient-glow-orbs-in-green-teal-amber-positioned-decoratively-in-the-background-at-very-low-opacity",
+      "title": "Overhaul the Hero section with a dramatically premium feel: use a deep multi-stop radial gradient background (from #0f2419 at center to #1a3a2a to near-black #0a0f0b at edges). Style the 'unaIITM' heading with a gradient text effect transitioning from emerald (#4a9e6a) to amber (#e8a84a) via CSS background-clip: text. Add a premium subtitle badge (e.g., 'IIT Madras Campus Platform') with a teal-tinted glassmorphism pill shape. Increase heading font size to 56–64px on mobile, with letter-spacing -0.02em for a high-end typographic feel. Add 2–3 subtle ambient glow orbs in green/teal/amber positioned decoratively in the background at very low opacity.",
+      "reqIds": [
+        "REQ-16"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-upgrade-the-navbar-to-a-premium-glassmorphism-bar-increase-backdrop-blur-to-blur-24px-deepen-the-background-to-rgba-15-36-25-0-85-add-a-bottom-border-of-1px-solid-rgba-74-158-106-0-2-for-a-subtle-emerald-separator-style-the-unaiitm-logo-text-with-the-same-gradient-text-effect-emerald-to-amber-matching-the-hero-heading-the-hamburger-icon-should-be-replaced-with-a-lucide-menu-icon-styled-with-emerald-colour-4a9e6a-the-dropdown-menu-should-use-a-deep-glassmorphism-background-with-individual-nav-links-styled-with-left-side-teal-accent-bars-on-hover",
+      "title": "Upgrade the Navbar to a premium glassmorphism bar: increase backdrop-blur to blur(24px), deepen the background to rgba(15,36,25,0.85), add a bottom border of 1px solid rgba(74,158,106,0.2) for a subtle emerald separator. Style the 'unaIITM' logo text with the same gradient text effect (emerald to amber) matching the hero heading. The hamburger icon should be replaced with a Lucide Menu icon styled with emerald colour (#4a9e6a). The dropdown menu should use a deep glassmorphism background with individual nav links styled with left-side teal accent bars on hover.",
+      "reqIds": [
+        "REQ-17"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-improve-global-spacing-and-typography-hierarchy-across-all-sections-section-titles-sectionheader-should-be-26-30px-bold-with-a-gradient-underline-or-accent-line-using-the-amber-teal-palette-section-subtitles-should-be-13-14px-in-muted-off-white-a8c4b0-increase-vertical-padding-between-sections-to-at-least-64px-increase-line-height-to-1-65-globally-for-body-text-add-generous-top-bottom-padding-16px-minimum-to-all-list-items-inside-bottompanel-and-modal-apply-letter-spacing-0-01em-to-all-headings-for-a-premium-typographic-feel",
+      "title": "Improve global spacing and typography hierarchy across all sections. Section titles (SectionHeader) should be 26–30px bold with a gradient underline or accent line using the amber/teal palette. Section subtitles should be 13–14px in muted off-white (#a8c4b0). Increase vertical padding between sections to at least 64px. Increase line-height to 1.65 globally for body text. Add generous top/bottom padding (16px minimum) to all list items inside BottomPanel and Modal. Apply letter-spacing: -0.01em to all headings for a premium typographic feel.",
+      "reqIds": [
+        "REQ-18"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-redesign-the-mess-menu-section-with-a-premium-card-layout-each-meal-card-breakfast-lunch-dinner-should-have-a-distinct-accent-colour-applied-to-its-header-strip-amber-gold-for-breakfast-emerald-for-lunch-teal-for-dinner-each-card-header-should-include-the-lucide-icon-e-g-coffee-utensilscrossed-moon-alongside-the-meal-name-food-items-inside-the-card-should-be-displayed-as-a-styled-list-with-subtle-divider-lines-1px-rgba-74-158-106-0-15-add-a-timings-badge-below-each-meal-title-using-the-accent-colour-as-background-at-20-opacity",
+      "title": "Redesign the Mess Menu section with a premium card layout: each meal card (Breakfast, Lunch, Dinner) should have a distinct accent colour applied to its header strip — amber/gold for Breakfast, emerald for Lunch, teal for Dinner. Each card header should include the Lucide icon (e.g., Coffee, UtensilsCrossed, Moon) alongside the meal name. Food items inside the card should be displayed as a styled list with subtle divider lines (1px rgba(74,158,106,0.15)). Add a 'Timings' badge below each meal title using the accent colour as background at 20% opacity.",
+      "reqIds": [
+        "REQ-19"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-redesign-the-quick-access-section-tiles-with-a-premium-icon-card-style-each-tile-should-have-a-square-or-rounded-square-format-with-a-gradient-icon-container-small-44px-circle-with-a-tinted-green-to-teal-or-green-to-amber-gradient-background-centred-at-top-the-lucide-icon-inside-in-white-and-the-label-text-below-in-12px-semi-bold-the-row-background-should-use-a-subtle-canopy-inspired-pattern-using-css-repeating-gradients-at-low-opacity-the-bottompanel-opened-from-each-tile-should-have-a-premium-header-with-the-tile-s-lucide-icon-gradient-accent-title-and-a-styled-close-button-x-icon-from-lucide-in-emerald",
+      "title": "Redesign the Quick Access section tiles with a premium icon card style: each tile should have a square or rounded-square format with a gradient icon container (small 44px circle with a tinted green-to-teal or green-to-amber gradient background) centred at top, the Lucide icon inside in white, and the label text below in 12px semi-bold. The row background should use a subtle canopy-inspired pattern using CSS repeating gradients at low opacity. The BottomPanel opened from each tile should have a premium header with the tile's Lucide icon, gradient accent title, and a styled close button (X icon from Lucide in emerald).",
+      "reqIds": [
+        "REQ-20"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Sticky top navbar with logo and hamburger dropdown (Home, Quick Access, Mess Menu, Events, Notices)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Hero section with large logo text, tagline, subtle gradient background with nature feel",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Quick Access horizontal swipe scroll with icon+label cards and slide-up mobile panel on tap",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Mess Menu section with horizontal scroll columns for Breakfast/Lunch/Dinner, card-based layout, swipe enabled",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Events section with horizontal swipe cards, icon + description, animated modal on click",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Notices section with same structure as Events, clean minimal design",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Mobile slide-up bottom panel and modal overlay with smooth animations",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Add smooth hover animations and enhanced nature theme (deeper forest greens, leaf/nature textures, glow effects on hover for all interactive elements)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Premium redesign: replace emojis with Lucide icons, mixed glassmorphism+gradient+luxury aesthetic, multi-accent colour palette (forest greens + amber/gold + teal + emerald), improved spacing and typography hierarchy",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "unaIITM",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}
